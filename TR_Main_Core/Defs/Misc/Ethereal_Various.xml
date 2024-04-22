@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Abstract="True" Name="EtherealThingBase_TR">
+		<category>Ethereal</category>
+		<useHitPoints>false</useHitPoints>
+		<drawerType>None</drawerType>
+	</ThingDef>
+	
+</Defs>
