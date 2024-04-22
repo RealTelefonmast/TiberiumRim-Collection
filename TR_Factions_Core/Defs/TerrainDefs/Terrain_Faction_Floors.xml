@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<TerrainDef Name="FloorBaseFactions" ParentName="FloorBaseTR" Abstract="True">
+		<designationCategory>TiberiumBuildings</designationCategory>
+	</TerrainDef>
+	
+	<TerrainDef Name="FloorBase_Nod" ParentName="FloorBaseFactions" Abstract="True">
+		<modExtensions>
+			<li Class="TeleCore.SubMenuExtension">
+				<groupDef>Nod</groupDef>
+				<category>Floors</category>
+			</li>
+			<li Class="TR.ResearchModExtension">
+				<requisites>
+					<tiberiumResearch>
+						<li>NodExperimental1</li>
+					</tiberiumResearch>
+				</requisites>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+	
+	<TerrainDef Name="FloorBase_GDI" ParentName="FloorBaseFactions" Abstract="True">
+		<modExtensions>
+			<li Class="TeleCore.SubMenuExtension">
+				<groupDef>GDI</groupDef>
+				<category>Floors</category>
+			</li>
+			<li Class="TR.ResearchModExtension">
+				<requisites>
+					<tiberiumResearch>
+						<li>GDIExperimental1</li>
+					</tiberiumResearch>
+				</requisites>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="FloorBase_Nod">
+		<defName>NodConcreteTile</defName>
+		<label>Nod concrete tile</label>
+		<renderPrecedence>240</renderPrecedence>
+		<description>Nod concrete tiles.</description>
+		<texturePath>Terrain/Nod/ConcreteTile</texturePath>
+		<statBases>
+			<Beauty>1</Beauty>
+			<WorkToBuild>250</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>4</Steel>
+		</costList>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="FloorBase_Nod">
+		<defName>NodConcreteFloor</defName>
+		<label>Nod concrete floor</label>
+		<renderPrecedence>240</renderPrecedence>
+		<description>Nod concrete floor.</description>
+		<texturePath>Terrain/Nod/ConcreteField</texturePath>
+		<statBases>
+			<Beauty>0</Beauty>
+			<WorkToBuild>150</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>2</Steel>
+		</costList>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="FloorBase_Nod">
+		<defName>NodDangerTile</defName>
+		<label>Nod striped floor</label>
+		<renderPrecedence>240</renderPrecedence>
+		<description>Nod danger floor.</description>
+		<texturePath>Terrain/Nod/Stripedpattern</texturePath>
+		<statBases>
+			<Beauty>1</Beauty>
+			<WorkToBuild>2000</WorkToBuild>
+			<TerrorSource MayRequire="Ludeon.RimWorld.Ideology">10</TerrorSource>
+		</statBases>
+		<costList>
+			<Steel>8</Steel>
+		</costList>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="FloorBase_Nod">
+		<defName>NodCarbonPlate</defName>
+		<label>Nod carbon floor</label>
+		<renderPrecedence>240</renderPrecedence>
+		<description>Nod carbon floor. Beautiful, and clean.</description>
+		<texturePath>Terrain/Nod/CarbonScaffold</texturePath>
+		<statBases>
+			<Beauty>3</Beauty>
+			<WorkToBuild>4000</WorkToBuild>
+			<Cleanliness>0.5</Cleanliness>
+		</statBases>
+		<costList>
+			<Nod_CarbonPlate>1</Nod_CarbonPlate>
+		</costList>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="FloorBase_Nod">
+		<defName>NodCarbonTile</defName>
+		<label>Nod carbon tile</label>
+		<renderPrecedence>240</renderPrecedence>
+		<description>Nod carbon tiles. Beautiful, and clean.</description>
+		<texturePath>Terrain/Nod/CarbonScaffoldTile</texturePath>
+		<statBases>
+			<Beauty>3</Beauty>
+			<WorkToBuild>4000</WorkToBuild>
+			<Cleanliness>0.5</Cleanliness>
+		</statBases>
+		<costList>
+			<Nod_CarbonPlate>1</Nod_CarbonPlate>
+		</costList>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+	
+	<!-- GDI -->
+	
+	<TerrainDef ParentName="FloorBase_GDI">
+		<defName>GDIConcreteTile</defName>
+		<label>GDI concrete tile</label>
+		<renderPrecedence>240</renderPrecedence>
+		<description>GDI concrete tiles.</description>
+		<texturePath>Terrain/GDI/ConcreteTile</texturePath>
+		<statBases>
+			<Beauty>1</Beauty>
+			<WorkToBuild>275</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>4</Steel>
+		</costList>
+		<constructEffect>ConstructMetal</constructEffect>
+		<modExtensions>
+			<li Class="TeleCore.SubMenuExtension">
+				<groupDef>GDI</groupDef>
+				<category>Structure</category>
+			</li>
+		</modExtensions>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="FloorBase_GDI">
+		<defName>GDIConcreteFloor</defName>
+		<label>GDI concrete floor</label>
+		<renderPrecedence>240</renderPrecedence>
+		<description>GDI concrete floor.</description>
+		<texturePath>Terrain/GDI/ConcreteField</texturePath>
+		<statBases>
+			<Beauty>0</Beauty>
+			<WorkToBuild>125</WorkToBuild>
+		</statBases>
+		<costList>
+			<Steel>2</Steel>
+		</costList>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="FloorBase_GDI">
+		<defName>GDIDangerTile</defName>
+		<label>GDI striped floor</label>
+		<renderPrecedence>240</renderPrecedence>
+		<description>GDI striped floor.</description>
+		<texturePath>Terrain/GDI/Stripedpattern</texturePath>
+		<statBases>
+			<Beauty>1</Beauty>
+			<WorkToBuild>2000</WorkToBuild>
+			<TerrorSource MayRequire="Ludeon.RimWorld.Ideology">10</TerrorSource>
+		</statBases>
+		<costList>
+			<Steel>8</Steel>
+		</costList>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="FloorBase_GDI">
+		<defName>GDIReinforcedPlate</defName>
+		<label>GDI reinforced floor</label>
+		<renderPrecedence>240</renderPrecedence>
+		<description>GDI reinforced floor. Beautiful, and clean.</description>
+		<texturePath>Terrain/GDI/ReinforcedScaffold</texturePath>
+		<statBases>
+			<Beauty>3</Beauty>
+			<WorkToBuild>4000</WorkToBuild>
+			<Cleanliness>0.5</Cleanliness>
+		</statBases>
+		<costList>
+			<GDI_ReinforcedPlate>1</GDI_ReinforcedPlate>
+		</costList>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="FloorBase_GDI">
+		<defName>GDIReinforcedTile</defName>
+		<label>GDI reinforced tile</label>
+		<renderPrecedence>240</renderPrecedence>
+		<description>GDI reinforced tiles. Beautiful, and clean.</description>
+		<texturePath>Terrain/GDI/ReinforcedScaffoldTile</texturePath>
+		<statBases>
+			<Beauty>3</Beauty>
+			<WorkToBuild>4000</WorkToBuild>
+			<Cleanliness>0.5</Cleanliness>
+		</statBases>
+		<costList>
+			<GDI_ReinforcedPlate>1</GDI_ReinforcedPlate>
+		</costList>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+
+	<!--Removed Scrin Terrain-->
+	
+</Defs>
